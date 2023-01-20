@@ -90,6 +90,7 @@ header {
 
     figure {
         width: 85px;
+        height: 85px;
     }
 
     ul {
