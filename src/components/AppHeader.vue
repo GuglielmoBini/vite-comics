@@ -78,10 +78,10 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    margin-top: 20px;
-    min-height: 100px;
+    height: 120px;
 
     .navbar {
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -99,6 +99,7 @@ header {
 
     a {
         color: black;
+        font-weight: bold;
     }
 
     a.active {

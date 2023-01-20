@@ -33,18 +33,18 @@ img {
   height: auto;
 }
 
-li {
+ul {
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  font-weight: bold;
   padding: 20px 10px;
 }
 
 /* utils */
 .container {
+  height: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }

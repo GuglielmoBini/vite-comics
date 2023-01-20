@@ -5,14 +5,16 @@ export default {
 </script>
 
 <template>
-    <section id="main-content">
-        <h2>Content goes here</h2>
-    </section>
+    <main>
+        <section id="main-content">
+            <h2>Content goes here</h2>
+        </section>
+    </main>
 </template>
 
-<style>
+<style scoped>
 #main-content {
-    min-height: 500px;
+    min-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
