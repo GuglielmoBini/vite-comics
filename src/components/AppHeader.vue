@@ -63,6 +63,7 @@ export default {
 
 <template>
     <header class="container">
+        <!-- header navbar -->
         <nav class="navbar">
             <figure>
                 <a href="#"><img src="../assets/img/dc-logo.png" alt="dc_logo"></a>
@@ -77,12 +78,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// importo file scss
 @use '../assets/scss/partials/mixins' as *;
 @use '../assets/scss/partials/variables' as *;
 
 header {
     height: 120px;
 
+    // header navbar
     .navbar {
         height: 100%;
         @include flex-between;

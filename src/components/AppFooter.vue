@@ -6,9 +6,11 @@ export default {
 
 <template>
     <footer>
+        <!-- footer-top -->
         <section id="footer-top">
             <div class="container">
                 <div class="row">
+                    <!-- links -->
                     <div class="col">
                         <div>
                             <h4>DC COMICS</h4>
@@ -56,6 +58,7 @@ export default {
                             </ul>
                         </div>
                     </div>
+                    <!-- logo big -->
                     <div class="col">
                         <figure>
                             <img src="../assets/img/dc-logo-bg.png" alt="dc_logo_bg">
@@ -64,8 +67,10 @@ export default {
                 </div>
             </div>
         </section>
+        <!-- footer-bottom -->
         <section id="footer-bottom">
             <div class="container">
+                <!-- footer-navbar -->
                 <nav class="footer-nav">
                     <a href="#">SIGN-UP NOW!</a>
                     <ul>
@@ -85,9 +90,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// importo file scss
 @use '../assets/scss/partials/mixins' as *;
 @use '../assets/scss/partials/variables' as *;
 
+// footer-top
 #footer-top {
     min-height: 500px;
     background-image: url(../assets/img/footer-bg.jpg);
@@ -131,6 +138,7 @@ export default {
 
 }
 
+// footer-bottom
 #footer-bottom {
     height: 120px;
     background-color: $darkergray;
