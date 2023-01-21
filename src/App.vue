@@ -14,38 +14,6 @@ export default {
   <app-footer></app-footer>
 </template>
 
-<style>
-/* reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* generics */
-body {
-  font-family: "Open Sans", sans-serif;
-  min-height: 100vh;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  padding: 20px 10px;
-}
-
-/* utils */
-.container {
-  height: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-}
+<style lang="scss">
+@use './assets/scss/style.scss';
 </style>

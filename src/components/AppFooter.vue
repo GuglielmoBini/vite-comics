@@ -57,7 +57,9 @@ export default {
                         </div>
                     </div>
                     <div class="col">
-                        <img src="../assets/img/dc-logo-bg.png" alt="dc_logo_bg">
+                        <figure>
+                            <img src="../assets/img/dc-logo-bg.png" alt="dc_logo_bg">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -83,6 +85,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
+@use '../assets/scss/partials/variables' as *;
+
 #footer-top {
     min-height: 500px;
     background-image: url(../assets/img/footer-bg.jpg);
@@ -91,24 +96,36 @@ export default {
     padding: 30px 0;
 
     .row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-between;
 
         .col:first-child {
             display: flex;
-            align-items: flex-start;
         }
 
         h4 {
             color: white;
-            padding: 15px 0;
+            padding: 11px 0;
         }
 
-        ul li a {
-            color: gray;
-            font-size: 0.8rem;
+        ul {
+            margin-right: 20px;
+
+            a {
+                color: gray;
+                font-size: 0.8rem;
+
+                &:hover {
+                    color: lightgrey
+                }
+            }
+
         }
+
+        figure {
+            height: 500px;
+            width: 500px;
+        }
+
     }
 
 
@@ -116,29 +133,28 @@ export default {
 
 #footer-bottom {
     height: 120px;
-    background-color: #303030;
+    background-color: $darkergray;
 
     .footer-nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-between;
         height: 100%;
-    }
 
-    ul {
-        display: flex;
-        align-items: center;
-    }
+        >a {
+            color: white;
+            padding: 20px;
+            border: 2px solid $darkblue;
+        }
 
+        ul {
+            display: flex;
+            align-items: center;
 
-    .footer-nav>a {
-        color: white;
-        padding: 20px;
-        border: 2px solid #0182F9;
-    }
-
-    a {
-        color: #0182F9;
+            a {
+                padding: 20px 10px;
+                display: block;
+                color: $darkblue;
+            }
+        }
     }
 }
 </style>

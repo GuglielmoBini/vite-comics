@@ -12,13 +12,14 @@ export default {
     </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
+@use '../assets/scss/partials/variables' as *;
+
 #main-content {
+    @include flex-center;
     min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-    background-color: #1C1C1C;
+    background-color: $almostblack;
 }
 </style>

@@ -65,7 +65,7 @@ export default {
     <header class="container">
         <nav class="navbar">
             <figure>
-                <img src="../assets/img/dc-logo.png" alt="dc_logo">
+                <a href="#"><img src="../assets/img/dc-logo.png" alt="dc_logo"></a>
             </figure>
             <ul>
                 <li v-for="link in links" :key="link.text"><a :href="link.url" :class="{ 'active': link.current }">{{
@@ -77,33 +77,41 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
+@use '../assets/scss/partials/variables' as *;
+
 header {
     height: 120px;
 
     .navbar {
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-between;
 
-    }
+        figure {
+            width: 85px;
+            height: 85px;
 
-    figure {
-        width: 85px;
-        height: 85px;
-    }
+            a {
+                padding: 0;
+            }
+        }
 
-    ul {
-        display: flex;
-    }
+        ul {
+            display: flex;
 
-    a {
-        color: black;
-        font-weight: bold;
-    }
+            a {
+                padding: 0 15px;
+                display: block;
+                color: black;
+                font-weight: bold;
 
-    a.active {
-        color: #0182F9;
+                &.active,
+                &:hover {
+                    color: $darkblue;
+                }
+            }
+
+        }
     }
 }
 </style>
