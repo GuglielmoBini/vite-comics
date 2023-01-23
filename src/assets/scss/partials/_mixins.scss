@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 // mixins
 @mixin flex-between {
   display: flex;
@@ -9,4 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin main-buttons {
+  padding: 15px;
+  background-color: $darkblue;
+  text-transform: uppercase;
 }
